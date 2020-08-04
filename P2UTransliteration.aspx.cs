@@ -835,15 +835,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਹੇ")
                     {
-                        check2 = PunjabiData[i + 1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "ہے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "ہے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "ہی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "ہی";
+                            UrduData += "ہے";
                             i++;
                         }
                     }
@@ -857,7 +865,12 @@ public partial class P2UTransliteration : System.Web.UI.Page
                                 UrduData += "ہیں";
                                 i += 2;
                             }
-                            if (check1 != ' ')
+                            else if (check1 == ',')
+                            {
+                                UrduData += "ہے";
+                                i++;
+                            }
+                            else if (check1 != ' ')
                             {
                                 UrduData += "ہی";
                                 i++;
@@ -989,7 +1002,7 @@ public partial class P2UTransliteration : System.Web.UI.Page
                             else if(check1 == ' ' || i+1 == len)
                             {
                                 UrduData += "کہ";
-                                i += 2;
+                                i += 1;
                             }
                             else
                             {
@@ -1020,15 +1033,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਕੇ")
                     {
-                        check2 = PunjabiData[i + 1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "کے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "کے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "کی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "کی";
+                            UrduData += "کے";
                             i++;
                         }
                     }
@@ -1257,15 +1278,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                                     }
                                     else
                                     {
-                                        check2 = PunjabiData[i+1];
-                                        if (check2 == ' ')
+                                        if (i + 2 < len)
                                         {
-                                            UrduData += "خے";
-                                            i += 2;
+                                            check2 = PunjabiData[i + 2];
+                                            if (check2 == ' ')
+                                            {
+                                                UrduData += "خے";
+                                                i += 2;
+                                            }
+                                            else
+                                            {
+                                                UrduData += "خی";
+                                                i += 2;
+                                            }
                                         }
                                         else
                                         {
-                                            UrduData += "خی";
+                                            UrduData += "خے";
                                             i += 2;
                                         }
                                     }
@@ -1474,15 +1503,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਖੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "کھے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "کھے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "کھی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "کھی";
+                            UrduData += "کھے";
                             i++;
                         }
                     }
@@ -1925,15 +1962,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਗੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "گے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "گے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "گی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "گی";
+                            UrduData += "گے";
                             i++;
                         }
                     }
@@ -2122,15 +2167,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਘੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "گھے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "گھے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "گھی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "گھی";
+                            UrduData += "گھے";
                             i++;
                         }
                     }
@@ -2323,15 +2376,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਚੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "چے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "چے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "چی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "چی";
+                            UrduData += "چے";
                             i++;
                         }
                     }
@@ -2520,15 +2581,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਛੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "چھے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "چھے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "چھی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "چھی";
+                            UrduData += "چھے";
                             i++;
                         }
                     }
@@ -2971,15 +3040,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਜੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "جے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "جے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "جی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "جی";
+                            UrduData += "جے";
                             i++;
                         }
                     }
@@ -3168,15 +3245,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਝੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "جھے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "جھے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "جھی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "جھی";
+                            UrduData += "جھے";
                             i++;
                         }
                     }
@@ -3367,15 +3452,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਟੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "ٹے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "ٹے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "ٹی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "ٹی";
+                            UrduData += "ٹے";
                             i++;
                         }
                     }
@@ -3564,15 +3657,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਠੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "ٹھے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "ٹھے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "ٹھی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "ٹھی";
+                            UrduData += "ٹھے";
                             i++;
                         }
                     }
@@ -3753,15 +3854,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਡੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
+                        {
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "ڈے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "ڈی";
+                                i++;
+                            }
+                        }
+                        else
                         {
                             UrduData += "ڈے";
-                            i++;
-                        }
-                        else 
-                        {
-                            UrduData += "ڈی";
                             i++;
                         }
                     }
@@ -3945,15 +4054,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਢੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "ڈھے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "ڈھے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "ڈھی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "ڈھی";
+                            UrduData += "ڈھے";
                             i++;
                         }
                     }
@@ -4093,15 +4210,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਣੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "ںے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "ںے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "ںی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "ںی";
+                            UrduData += "ںے";
                             i++;
                         }
                     }
@@ -4231,15 +4356,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਤੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "تے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "تے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "تی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "تی";
+                            UrduData += "تے";
                             i++;
                         }
                     }
@@ -4428,15 +4561,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਥੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "تھے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "تھے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "تھی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "تھی";
+                            UrduData += "تھے";
                             i++;
                         }
                     }
@@ -4628,15 +4769,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਦੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "دے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "دے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "دی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "دی";
+                            UrduData += "دے";
                             i++;
                         }
                     }
@@ -4825,15 +4974,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਧੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "دھے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "دھے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "دھی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "دھی";
+                            UrduData += "دھے";
                             i++;
                         }
                     }
@@ -5041,15 +5198,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਨੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "نے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "نے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "نی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "نی";
+                            UrduData += "نے";
                             i++;
                         }
                     }
@@ -5238,15 +5403,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਪੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "پے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "پے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "پی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "پی";
+                            UrduData += "پے";
                             i++;
                         }
                     }
@@ -5687,15 +5860,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਫੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "پھے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "پھے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "پھی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "پھی";
+                            UrduData += "پھے";
                             i++;
                         }
                     }
@@ -5886,15 +6067,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਬੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
+                        {
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "بے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "بی";
+                                i++;
+                            }
+                        }
+                        else
                         {
                             UrduData += "بے";
-                            i++;
-                        }
-                        else 
-                        {
-                            UrduData += "بی";
                             i++;
                         }
                     }
@@ -6083,15 +6272,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਭੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "بھے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "بھے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "بھ";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "بھ";
+                            UrduData += "بھے";
                             i++;
                         }
                     }
@@ -6282,15 +6479,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਮੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "مے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "مے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "می";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "می";
+                            UrduData += "مے";
                             i++;
                         }
                     }
@@ -6435,15 +6640,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਯੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "یے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "یے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "یی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "یی";
+                            UrduData += "یے";
                             i++;
                         }
                     }
@@ -6605,15 +6818,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਰੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "رے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "رے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "ری";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "ری";
+                            UrduData += "رے";
                             i++;
                         }
                     }
@@ -7015,15 +7236,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਲੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "لے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "لے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "لی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "لی";
+                            UrduData += "لے";
                             i++;
                         }
                     }
@@ -7212,15 +7441,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਵੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "وے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "وے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "وی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "وی";
+                            UrduData += "وے";
                             i++;
                         }
                     }
@@ -7399,15 +7636,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ੜੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "ڑے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "ڑے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "ڑی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "ڑی";
+                            UrduData += "ڑے";
                             i++;
                         }
                     }
@@ -7569,15 +7814,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਸ਼ੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "شے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "شے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "شی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "شی";
+                            UrduData += "شے";
                             i++;
                         }
                     }
@@ -7933,15 +8186,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਸੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "سے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "سے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "سی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "سی";
+                            UrduData += "سے";
                             i++;
                         }
                     }
@@ -8130,15 +8391,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਜ਼ੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "ظے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "ظے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "ظی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "ظی";
+                            UrduData += "ظے";
                             i++;
                         }
                     }
@@ -8327,15 +8596,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਫ਼ੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "فے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "فے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "فی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "فی";
+                            UrduData += "فے";
                             i++;
                         }
                     }
@@ -8524,15 +8801,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਲ਼ੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "لے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "لے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "لی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "لی";
+                            UrduData += "لے";
                             i++;
                         }
                     }
@@ -8699,15 +8984,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਗ਼ੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "غے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "غے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "غی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "غی";
+                            UrduData += "غے";
                             i++;
                         }
                     }
@@ -8896,15 +9189,23 @@ public partial class P2UTransliteration : System.Web.UI.Page
                     }
                     else if (check == "ਖ਼ੇ")
                     {
-                        check2 = PunjabiData[i+1];
-                        if (check2 == ' ')
+                        if (i + 2 < len)
                         {
-                            UrduData += "خے";
-                            i++;
+                            check2 = PunjabiData[i + 2];
+                            if (check2 == ' ')
+                            {
+                                UrduData += "خے";
+                                i++;
+                            }
+                            else
+                            {
+                                UrduData += "خی";
+                                i++;
+                            }
                         }
                         else
                         {
-                            UrduData += "خی";
+                            UrduData += "خے";
                             i++;
                         }
                     }
