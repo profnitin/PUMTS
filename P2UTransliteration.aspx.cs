@@ -9282,4 +9282,9 @@ public partial class P2UTransliteration : System.Web.UI.Page
         }
         txtUrdu.Text = UrduData;
     }
+    protected void btnTransliterate0_Click(object sender, EventArgs e)
+    {
+        txtPunjabi.Text = string.Empty;
+        txtUrdu.Text = string.Empty;
+    }
 }
